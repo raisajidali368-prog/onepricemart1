@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Price Mart — Everything at PKR 275</title>
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
+  <meta name="description" content="One Price Mart — Wholesale household essentials at a single fixed price. Everything at PKR 275. Budget-friendly, bulk quality, fast delivery.">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="siteHeader" class="header transparent">
+    <div class="container nav">
+      <a class="logo" href="#hero">
+        <span class="logo-badge">₨</span>
+        <span>One Price Mart</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#benefits">Benefits</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Floating Cart Button -->
+  <button class="cart-fab" id="cartFab" aria-label="Open cart" title="Open cart">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M6 6h15l-1.5 9h-13z" stroke-width="1.5"></path>
+      <circle cx="9" cy="20" r="1.5"></circle>
+      <circle cx="18" cy="20" r="1.5"></circle>
+    </svg>
+    <span id="cartCount" class="badge">0</span>
+  </button>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" class="icon-button" aria-label="Close cart">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M18 6 6 18M6 6l12 12" stroke-width="1.5"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">PKR 0</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Checkout</button>
+      <p class="muted small">Checkout is a demo — connect your gateway later.</p>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" tabindex="-1" aria-hidden="true"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner reveal">
+      <div class="hero-content">
+        <h1>Everything at PKR 275</h1>
+        <p>Wholesale, budget-friendly essentials with bulk quality and transparent pricing. Shop smarter — pay the same price for every item.</p>
+        <div class="cta-group">
+          <a href="#products" class="btn btn-primary">Shop Now</a>
+          <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Why Shop With Us</h2>
+      <div class="grid benefits-grid">
+        <div class="card benefit reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 10h18M7 6h10M7 14h10M5 18h14" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <h3>Fixed Price</h3>
+          <p>Every product is PKR 275. Clear, simple, no surprises.</p>
+        </div>
+        <div class="card benefit reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="m3 12 6 6L21 6" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <h3>Bulk Quality</h3>
+          <p>Wholesale-grade essentials vetted for everyday use.</p>
+        </div>
+        <div class="card benefit reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15V6a2 2 0 0 0-2-2H7L3 8v11a2 2 0 0 0 2 2h10" stroke-width="1.5"></path>
+              <path d="M7 8h11" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Reliable shipping partners to get your order quickly.</p>
+        </div>
+        <div class="card benefit reveal">
+          <div class="benefit-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="8" r="4" stroke-width="1.5"></circle>
+              <path d="M6 20a6 6 0 1 1 12 0" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <h3>Trusted Store</h3>
+          <p>Local, reliable, and focused on customer happiness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="section-title">Shop Household Essentials</h2>
+        <div class="filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="Kitchen">Kitchen</button>
+          <button class="chip" data-filter="Cleaning">Cleaning</button>
+          <button class="chip" data-filter="Storage">Storage</button>
+          <button class="chip" data-filter="Personal Care">Personal Care</button>
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid product-grid"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section section-alt">
+    <div class="container about-wrap reveal">
+      <div class="about-media">
+        <img src="https://picsum.photos/seed/warehouse/900/700" alt="Wholesale warehouse shelves" class="about-img" loading="lazy">
+      </div>
+      <div class="about-content">
+        <h2>About One Price Mart</h2>
+        <p>We’re a wholesale-first household store built around one simple promise: a single fixed price. This keeps shopping fast and fair. Our team carefully curates essentials so you don’t waste time comparing prices for everyday needs.</p>
+        <p>Whether you’re stocking a shop, office, or home, we’ve got you covered with a clean catalog, swift delivery, and friendly support.</p>
+        <ul class="checklist">
+          <li>Wholesale-focused, retail-friendly</li>
+          <li>Transparent pricing: always PKR 275</li>
+          <li>Reliable quality & bulk availability</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <div class="contact-grid reveal">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="muted small">Demo form — connect to your backend later.</p>
+        </form>
+
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>Connect</h3>
+            <p>Reach us for wholesale queries, bulk orders, or product info.</p>
+            <ul class="socials">
+              <li><a href="#" aria-label="Facebook" title="Facebook">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13 22v-9h3l1-4h-4V7c0-1.103.897-2 2-2h2V1h-3c-2.757 0-5 2.243-5 5v3H6v4h3v9h4z"/>
+                </svg>
+              </a></li>
+              <li><a href="#" aria-label="Instagram" title="Instagram">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.505 4.505 0 0 0 12 7.5zM18 6.5a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/>
+                </svg>
+              </a></li>
+              <li><a href="#" aria-label="TikTok" title="TikTok">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M21 8.5a7.49 7.49 0 0 1-5.5-2.2V16a5 5 0 1 1-5-5 5.51 5.51 0 0 1 2 .38V8.2A7.49 7.49 0 0 1 17.5 10a7.51 7.51 0 0 0 3.5-1.5z"/>
+                </svg>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a class="wa-fab" href="https://wa.me/92XXXXXXXXXX?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20one-price%20store" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20.5 3.5A11 11 0 0 0 3 20l-1 4 4-1A11 11 0 1 0 20.5 3.5zM7 17l.5-2a8 8 0 1 1 1.5 1.5L7 17z"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#hero">
+          <span class="logo-badge">₨</span>
+          <span>One Price Mart</span>
+        </a>
+        <p class="muted">Wholesale household essentials — every item only PKR 275.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@onepricemart.pk">hello@onepricemart.pk</a></li>
+          <li><a href="tel:+92XXXXXXXXXX">+92XXXXXXXXXX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> One Price Mart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/app.js"></script>
+</body>
+</html>
